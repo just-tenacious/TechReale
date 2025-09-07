@@ -1,0 +1,8 @@
+next:-
+
+password should be brcypt form 
+- need to send email for verification after new registration
+- once registration successfully then need to verify that account
+- once verification completed user can login
+- without verification user can't login, if he try to login then again otp will send until they verify the account
+- after verification user can login
