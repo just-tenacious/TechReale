@@ -33,7 +33,7 @@
     <h2 align="center">User List</h2>
     <table center:"true" style="width:60vw; margin-bottom:30px;">
         <thead style="background-color:blue; color:white;">
-          <tr><th>ID</th><th>Name</th><th>Age</th><th>Actions</th></tr>
+          <tr><th>ID</th><th>Name</th><th>Age</th><th>Username</th><th>Email<th>Actions</th></tr>
         </thead>
         <tbody>
             {% for user in users %}
@@ -41,6 +41,8 @@
                 <td>{{ user.id }}</td>
                 <td>{{ user.name }}</td>
                 <td>{{ user.age }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
                 <td>
                   <form action="{% url 'update_user' user.id%}" method="post" style="display:inline;">
                     {% csrf_token %}

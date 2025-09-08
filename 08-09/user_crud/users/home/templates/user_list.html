@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Table</title>
+  <style>
+    table, th, td {
+      border: 1px solid #333;
+      border-collapse: collapse;
+      padding: 8px;
+      margin: 20px;
+    }
+    table {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    tr{
+      width:50vw;
+    }
+    td {
+      text-align: center;
+      width:30vw;
+    }
+
+    button:hover, a:hover {
+      cursor: pointer;
+    }
+    a{
+      border-radius:5px;
+    }
+  </style>
+</head>
+<body>
+    <h2 align="center">User List</h2>
+    <table center:"true" style="width:60vw; margin-bottom:30px;">
+        <thead style="background-color:blue; color:white;">
+          <tr><th>ID</th><th>Name</th><th>Age</th><th>Username</th><th>Email</th><th>Actions</th></tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                  <form action="{% url 'update_user' user.id%}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <a href="{% url 'update_user' user.id %}" style="text-decoration:none; padding:10px; color:white; background:red; border:none; border-radius:5px margin:10px">Edit</a>
+                  </form>
+                  <form action="{% url 'delete_user' user.id%}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" style="padding:10px; color:white; background:blue; border:none; border-radius:5px;">Delete</button>
+                  </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div style="text-align:center;">
+      <a href="{% url 'add_user' %}" style="text-decoration:none; color:white; background:darkslategray; padding:20px; border:none; border-radius:10px;">Add New User</a>
+    </div>
+    <div>
+      <a href="{% url 'logout' %}" style="text-decoration:none; color:white; background:darkslategray; padding:20px; border:none; border-radius:10px;">Logout</a>
+    </div>
+</body>
+</html>

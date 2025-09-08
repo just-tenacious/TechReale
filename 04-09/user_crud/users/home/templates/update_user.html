@@ -86,6 +86,22 @@
                 <div style="color: red;">{{ form.age.errors }}</div>
             {% endif %}
         </p>
+
+        <p>
+            {{ form.username.label_tag }}<br>
+            {{ form.username }}
+            {% if form.username.errors %}
+                <div style="color: red;">{{ form.username.errors }}</div>
+            {% endif %}
+        </p>
+
+        <p>
+            {{form.password.label_tag}}<br>
+            {{ form.password }}
+            {% if form.password.errors %}
+                <div style="color: red;">{{ form.password.errors }}</div>
+            {% endif %}
+        </p>
         
         <button type="submit">Update User</button>
     </form>
