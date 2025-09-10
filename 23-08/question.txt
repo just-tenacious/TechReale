@@ -1,0 +1,43 @@
+5. Word Scramble / Anagram Game
+What to do:
+- Program picks a random word and scrambles letters.
+- Player guesses original word.
+- Track score for multiple rounds.
+
+Expected Output:
+Scrambled word: "thpyno"
+Your guess: python
+✅ Correct!
+Next word: "rgpoarm"
+Your guess: program
+✅ Correct! Score: 2
+
+6. Sudoku (Text-based)
+What to do:
+- Display 9x9 grid with some numbers filled.
+- Player enters row, column, number.
+- Validate if move is correct.
+- Optionally, implement solver.
+
+Expected Output:
+Welcome to Sudoku!
+Board:
+5 3 _ | _ 7 _ | _ _ _
+6 _ _ | 1 9 5 | _ _ _
+_ 9 8 | _ _ _ | _ 6 _
+Enter row, col, number: 1 3 4
+Placed 4 at (1,3)!
+
+7. Word Ladder Game
+What to do:
+- Start with one word (e.g., "cold").
+- Change one letter at a time to reach target word ("warm").
+- Each intermediate step must be a valid word.
+
+Expected Output:
+Word Ladder: cold → warm
+Enter next word: cord
+Enter next word: word
+Enter next word: ward
+Enter next word: warm
+🎉 You solved it in 4 steps!

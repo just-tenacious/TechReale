@@ -1,0 +1,29 @@
+9. Poker (Simplified CLI Version)
+What to do:
+- Deal 5 cards to player and dealer.
+- Implement hand rankings (pair, flush, straight).
+- Compare and declare winner.
+
+Expected Output:
+Your hand: [♠A, ♥K, ♣K, ♦7, ♣2]
+Dealer hand: [♠10, ♥10, ♦9, ♣9, ♠3]
+Your best hand: One Pair (Kings)
+Dealer best hand: Two Pairs (10s & 9s)
+Dealer wins!
+
+10. Multiplayer CLI Game (File or Socket Based)
+What to do:
+- Create two-player Tic-Tac-Toe using file/sockets.
+- One player’s move is written to file, other reads.
+- Alternate until win or draw.
+
+Expected Output:
+Player 1’s turn: Enter row,col: 1,1
+Board:
+X _ _
+_ _ _
+_ _ _
+(Player 2 runs program separately)
+Board updated: Player 1 played at (1,1).
+Player 2’s turn: Enter row,col: 1,2
+...
